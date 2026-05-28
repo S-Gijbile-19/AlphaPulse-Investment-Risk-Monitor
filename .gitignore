@@ -20,7 +20,6 @@ env/
 
 # ----- Environment Variables ----------------
 .env
-.env.local
 *.env
 
 # ----- OS Files -----------------------------

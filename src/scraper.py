@@ -18,17 +18,6 @@ os.makedirs(RAW_DATA_FOLDER, exist_ok=True)
 
 # Download function with retry logic
 def download_ticker(ticker, start, end, retries=3, wait=5):
-    """
-    Downloads historical OHLCV data for a single ticker.
-    Retries up to 3 times if the download fails (e.g. API rate limit).
-
-    Parameters:
-        ticker  : stock symbol e.g. "AAPL"
-        start   : start date string "YYYY-MM-DD"
-        end     : end date string   "YYYY-MM-DD"
-        retries : number of retry attempts
-        wait    : seconds to wait between retries
-    """
     for attempt in range(1, retries + 1):
         try:
             print(f"  Downloading {ticker} attempt {attempt}")
@@ -66,8 +55,6 @@ def download_ticker(ticker, start, end, retries=3, wait=5):
 def run_scraper():
     all_tickers = TICKERS + [BENCHMARK]
     failed      = []   # track any tickers that couldn't be downloaded
-    summary     = []   # collect summary info for the report
-
     for ticker in all_tickers:
         data = download_ticker(ticker, START_DATE, END_DATE)
 
@@ -77,37 +64,11 @@ def run_scraper():
             safe_name = ticker.replace("^", "") + ".csv"
             filepath  = os.path.join(RAW_DATA_FOLDER, safe_name)
             data.to_csv(filepath)
-            print(f"     Saved → {filepath}\n")
-
-            summary.append({
-                "Ticker"    : ticker,
-                "Rows"      : len(data),
-                "Start"     : str(data.index[0].date()),
-                "End"       : str(data.index[-1].date()),
-                "Null Count": int(data.isnull().sum().sum()),
-                "Status"    : "OK"
-            })
         else:
             failed.append(ticker)
-            summary.append({
-                "Ticker" : ticker,
-                "Rows"   : 0,
-                "Start"  : "—",
-                "End"    : "—",
-                "Null Count": "—",
-                "Status" : "FAILED"
-            })
-
+        
         # Small pause between downloads to avoid rate limiting
         time.sleep(1)
-
-
-    summary_df = pd.DataFrame(summary)
-    print(summary_df.to_string(index=False))
-
-    # Save summary report as CSV
-    summary_path = os.path.join(RAW_DATA_FOLDER, "_download_summary.csv")
-    summary_df.to_csv(summary_path, index=False)
 
     if failed:
         print(f"  {len(failed)} ticker(s) failed: {failed}")

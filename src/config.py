@@ -1,0 +1,8 @@
+TICKERS = [
+    "AAPL", "META", "JPM", "JNJ", "XOM",
+    "AMZN", "PG",   "NEE", "CAT", "NVDA"
+]
+
+BENCHMARK  = "^GSPC"
+START_DATE = "2019-01-01"
+END_DATE   = "2024-12-31"

@@ -131,13 +131,54 @@ def export_clean(master, log_returns):
     os.makedirs(CLEAN_FOLDER, exist_ok=True)
 
     # Export master prices
-    prices_path = os.path.join(CLEAN_FOLDER, "master_prices.csv")
+    prices_path = os.path.join(CLEAN_FOLDER, "main_prices.csv")
     master.to_csv(prices_path)
 
     # Export log returns
-    returns_path = os.path.join(CLEAN_FOLDER, "master_returns.csv")
+    returns_path = os.path.join(CLEAN_FOLDER, "main_returns.csv")
     log_returns.to_csv(returns_path)
 
+
+def plot_returns_sanity(log_returns):
+
+    fig, axes = plt.subplots(1, 2, figsize=(16, 5))
+    fig.patch.set_facecolor("#FAFAFA")
+
+    ax1 = axes[0]
+    ax1.set_facecolor("#FAFAFA")
+    cum_returns = log_returns.cumsum()
+    for col in cum_returns.columns:
+        lw = 2 if col == "SP500" else 1.2
+        ls = "--" if col == "SP500" else "-"
+        ax1.plot(cum_returns.index, cum_returns[col], label=col,
+                 linewidth=lw, linestyle=ls)
+    ax1.set_title("Cumulative Log Returns (2019–2024)", fontsize=12, fontweight="bold")
+    ax1.set_xlabel("Date")
+    ax1.set_ylabel("Cumulative Log Return")
+    ax1.legend(fontsize=8, ncol=2)
+    ax1.grid(True, alpha=0.3, linestyle="--")
+
+    # Right: Correlation matrix heatmap (preview for Week 2)
+    ax2 = axes[1]
+    corr = log_returns.corr()
+    im   = ax2.imshow(corr.values, cmap="RdYlGn", vmin=-1, vmax=1)
+    ax2.set_xticks(range(len(corr.columns)))
+    ax2.set_yticks(range(len(corr.columns)))
+    ax2.set_xticklabels(corr.columns, rotation=45, ha="right", fontsize=8)
+    ax2.set_yticklabels(corr.columns, fontsize=8)
+    plt.colorbar(im, ax=ax2, shrink=0.8)
+    # Annotate cells
+    for i in range(len(corr)):
+        for j in range(len(corr.columns)):
+            ax2.text(j, i, f"{corr.values[i,j]:.2f}",
+                     ha="center", va="center", fontsize=7,
+                     color="black" if abs(corr.values[i,j]) < 0.7 else "white")
+    ax2.set_title("Correlation Matrix — Preview for Week 2", fontsize=12, fontweight="bold")
+
+    plt.tight_layout()
+    path = os.path.join(CLEAN_FOLDER, "sanity_check.png")
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
 
 
 
@@ -147,4 +188,4 @@ if __name__ == "__main__":
     master      = integrity_checks(master)
     log_returns = compute_log_returns(master)
     export_clean(master, log_returns)
-    # plot_returns_sanity(log_returns)
+    plot_returns_sanity(log_returns)

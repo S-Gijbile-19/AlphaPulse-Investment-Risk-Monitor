@@ -48,7 +48,7 @@ def download_ticker(ticker, start, end, retries=3, wait=5):
                 print(f"     Waiting {wait}s before retry...")
                 time.sleep(wait)
             else:
-                print(f"  ✗ All {retries} attempts failed for {ticker}. Skipping.")
+                print(f" All {retries} attempts failed for {ticker}. Skipping.")
                 return None
 
 # Loop through all tickers and download

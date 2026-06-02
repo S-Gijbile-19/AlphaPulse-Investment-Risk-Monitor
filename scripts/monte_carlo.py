@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import os
+
+os.makedirs("output", exist_ok=True)
 
 returns = pd.read_csv("data/clean/main_returns.csv")
 
@@ -31,3 +34,14 @@ for _ in range(num_simulations):
 print("Monte Carlo Simulation Complete")
 print("Number of Simulations:", num_simulations)
 print("Average Future Portfolio Value:", np.mean(simulation_results))
+
+simulation_df = pd.DataFrame({
+    "Future_Portfolio_Value": simulation_results
+})
+
+simulation_df.to_csv(
+    "output/monte_carlo_results.csv",
+    index=False
+)
+
+print("Results exported successfully")

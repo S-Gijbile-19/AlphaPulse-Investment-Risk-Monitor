@@ -1,9 +1,16 @@
 import pandas as pd
 
-returns = pd.read_csv("../main_returns.csv")
+# Load returns data
+returns = pd.read_csv("main_returns.csv")
 
-returns = returns.drop(columns=["Date"])
+# Remove Date column if present
+if "Date" in returns.columns:
+    returns = returns.drop(columns=["Date"])
 
-corr_matrix = returns.corr()
+# Calculate correlation matrix
+correlation_matrix = returns.corr()
 
-print(corr_matrix)
+# Save output
+correlation_matrix.to_csv("outputs/correlation_matrix.csv")
+
+print("Correlation matrix saved successfully.")

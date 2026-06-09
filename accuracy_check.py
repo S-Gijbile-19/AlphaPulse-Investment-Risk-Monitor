@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 print("Loading data...")
-returns = pd.read_csv('data/clean/master_returns.csv', index_col=0, parse_dates=True)
+returns = pd.read_csv('main_returns.csv', index_col=0, parse_dates=True)
 
 print("\n🔍 FINANCIAL ACCURACY CHECK")
 print("="*50)

@@ -23,8 +23,8 @@ Financial analytics project for portfolio risk, volatility, and Monte Carlo simu
 | NVDA | NVIDIA | Technology | 3970.1% |
 | ^GSPC | S&P 500 Index | Benchmark | 135.3% |
 
-**Date Range:** 2019-01-02 → 2024-12-30  
-**Trading Days:** 1,509 rows per ticker  
+**Date Range:** 2019-01-02 → 2026-06-03  
+**Trading Days:** 1,865 rows per ticker  
 **Source:** Yahoo Finance via `yfinance` (auto-adjusted for splits & dividends)
 
 ---
@@ -95,7 +95,7 @@ alphapulse/
 | Stock split adjustments (AAPL, NVDA, AMZN) | ✅ Verified |
 | Dividend adjustments (META, JPM, etc.) | ✅ Auto-adjusted |
 | Anomalous price moves > 30% | ✅ Zero found |
-| Date alignment across all tickers | ✅ 1509 common dates |
+| Date alignment across all tickers | ✅ 1865 common dates |
 | Null values | ✅ Zero |
 | Negative or zero prices | ✅ Zero |
 | Duplicate dates | ✅ Zero |
@@ -114,7 +114,7 @@ alphapulse/
 
 4. **S&P 500 is stored as `SP500`** in both CSVs.
 
-5. **Date range note:** Markets were closed Jan 1 and Dec 31, so actual data runs 2019-01-02 → 2024-12-30.
+5. **Date range note:** Markets were closed Jan 1 and Dec 31, so actual data runs 2019-01-02 → 2026-06-03.
 
 ---
 

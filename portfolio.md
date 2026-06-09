@@ -2,7 +2,7 @@
 
 ## Date Range
 - Start: 2019-01-01
-- End:   2024-12-31
+- End:   2026-06-03
 
 ## Tickers
 | Ticker | Company           | Sector       |

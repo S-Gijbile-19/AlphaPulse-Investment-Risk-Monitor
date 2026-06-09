@@ -131,11 +131,11 @@ def export_clean(master, log_returns):
     os.makedirs(CLEAN_FOLDER, exist_ok=True)
 
     # Export master prices
-    prices_path = os.path.join(CLEAN_FOLDER, "main_prices.csv")
+    prices_path = os.path.join(CLEAN_FOLDER, "master_prices.csv")
     master.to_csv(prices_path)
 
     # Export log returns
-    returns_path = os.path.join(CLEAN_FOLDER, "main_returns.csv")
+    returns_path = os.path.join(CLEAN_FOLDER, "master_returns.csv")
     log_returns.to_csv(returns_path)
 
 

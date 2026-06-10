@@ -4,7 +4,7 @@ import os
 # Create output folder
 os.makedirs("output", exist_ok=True)
 
-returns = pd.read_csv("main_returns.csv")
+returns = pd.read_csv("data/clean/master_returns.csv")
 
 if "Date" in returns.columns:
     returns = returns.drop(columns=["Date"])

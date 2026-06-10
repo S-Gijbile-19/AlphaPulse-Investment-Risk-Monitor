@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load returns
-returns = pd.read_csv("data\clean\main_returns.csv")
+returns = pd.read_csv("data\clean\master_returns.csv")
 
 if "Date" in returns.columns:
     returns = returns.drop(columns=["Date"])

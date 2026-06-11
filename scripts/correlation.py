@@ -1,6 +1,21 @@
 import pandas as pd
+import os
 
-print("Correlation analysis module initialized")
+# Create output folder
+os.makedirs("output", exist_ok=True)
 
-def correlation_matrix(returns):
-    return returns.corr()
+returns = pd.read_csv("data/clean/master_returns.csv")
+
+if "Date" in returns.columns:
+    returns = returns.drop(columns=["Date"])
+
+corr_matrix = returns.corr()
+
+print(corr_matrix)
+
+# Save correlation matrix
+corr_matrix.to_csv(
+    "output/correlation_matrix.csv"
+)
+
+print("Correlation matrix exported successfully")

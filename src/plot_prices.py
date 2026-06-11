@@ -39,7 +39,7 @@ def plot_raw(all_data):
 
     fig, axes = plt.subplots(5, 2, figsize=(16, 18))
     fig.patch.set_facecolor("#FAFAFA")
-    fig.suptitle("AlphaPulse — Raw Adjusted Close Prices (2019–2024)",
+    fig.suptitle("AlphaPulse — Raw Adjusted Close Prices (2019–2026)",
                  fontsize=14, fontweight="bold", y=1.01)
 
     axes_flat = axes.flatten()

@@ -30,3 +30,12 @@ print(
          "Rolling_Volatility"]
     ].tail()
 )
+
+os.makedirs("output", exist_ok=True)
+
+data.to_csv(
+    "output/rolling_volatility.csv",
+    index=False
+)
+
+print("Rolling volatility exported")

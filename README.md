@@ -131,6 +131,11 @@ alphapulse/
 
 *Week 1 complete. All clean data files are in `data/clean/` and ready for Week 2 Monte Carlo simulation and Tableau visualisation.*
 
+Week 4 — Finalization
+I automated the market data refresh process by building refresh_data.py, which downloads the latest stock prices for all 11 tickers and calculates log returns — saving them as master_prices.csv and master_returns.csv. This runs automatically every Sunday via Windows Task Scheduler without any manual effort.
+I also built executive_summary.py to compute the highest-level KPIs — VaR (95%) and Max Drawdown — for all 11 tickers and export them to executive_summary.csv.
+For the Financial Accuracy Check, I developed accuracy_check.py which validated all calculated risk metrics including Sharpe Ratio, Annual Return, and Volatility across all 11 tickers. The result was a 100% pass rate with zero null values across 1,508 trading days.
+
 
 
 

@@ -131,10 +131,17 @@ alphapulse/
 
 *Week 1 complete. All clean data files are in `data/clean/` and ready for Week 2 Monte Carlo simulation and Tableau visualisation.*
 
-Week 4 — Finalization
-I automated the market data refresh process by building refresh_data.py, which downloads the latest stock prices for all 11 tickers and calculates log returns — saving them as master_prices.csv and master_returns.csv. This runs automatically every Sunday via Windows Task Scheduler without any manual effort.
-I also built executive_summary.py to compute the highest-level KPIs — VaR (95%) and Max Drawdown — for all 11 tickers and export them to executive_summary.csv.
-For the Financial Accuracy Check, I developed accuracy_check.py which validated all calculated risk metrics including Sharpe Ratio, Annual Return, and Volatility across all 11 tickers. The result was a 100% pass rate with zero null values across 1,508 trading days.
+GitHub-க்கு **detailed version** வேணும்னா இதைப் போடலாம்:
+
+**Week 4 – Finalization**
+
+In the final phase of the project, I automated the complete market data refresh process by developing `refresh_data.py`. This script downloads the latest stock prices for all 11 selected tickers, calculates daily log returns, and updates the master datasets (`master_prices.csv` and `master_returns.csv`). To eliminate manual intervention, the process was scheduled to run automatically every Sunday using Windows Task Scheduler.
+
+To provide high-level business insights, I developed `executive_summary.py`, which calculates key risk metrics such as Value at Risk (VaR 95%) and Maximum Drawdown for all 11 stocks. The results are exported into `executive_summary.csv`, enabling quick executive-level analysis of portfolio risk.
+
+To ensure the reliability and accuracy of all calculations, I built `accuracy_check.py`, which validates important financial metrics including Sharpe Ratio, Annual Return, and Volatility across the entire dataset. The validation process successfully achieved a **100% pass rate**, with **zero null values** detected across **1,508 trading days**, confirming the integrity and consistency of the data pipeline.
+
+**Outcome:** Successfully delivered a fully automated end-to-end financial risk analytics workflow, covering data collection, risk metric generation, executive reporting, validation, and scheduled execution with high accuracy and reliability.
 
 
 

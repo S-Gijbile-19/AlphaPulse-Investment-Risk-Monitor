@@ -129,6 +129,28 @@ alphapulse/
 
 ---
 
+## Project Workflow
+
+1. Data Collection
+   - Historical stock data fetched using yFinance.
+
+2. Returns Analysis
+   - Daily log returns calculated for each asset.
+
+3. Risk Analytics
+   - Rolling Volatility
+   - Correlation Analysis
+   - Monte Carlo Simulation
+   - Value at Risk (VaR)
+
+4. Dashboard & Reporting
+   - Tableau / Power BI visualizations
+   - Risk monitoring outputs
+
+5. Decision Support
+   - Portfolio risk assessment
+   - Diversification insights
+
 *Week 1 complete. All clean data files are in `data/clean/` and ready for Week 2 Monte Carlo simulation and Tableau visualisation.*
 
 GitHub-க்கு **detailed version** வேணும்னா இதைப் போடலாம்:

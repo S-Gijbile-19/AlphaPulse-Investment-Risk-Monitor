@@ -250,5 +250,185 @@ A consolidated executive dashboard was developed to provide a high-level overvie
 ## Project Status
 
 Week 3 successfully enhanced the AlphaPulse Investment Risk Monitor by introducing portfolio risk analytics, advanced visualizations, and executive reporting capabilities.
+Week 4-ku GitHub README/documentation-la podura maari professional-a detailed content:
+
+# Week 4: Portfolio Automation & Executive Reporting
+
+## Overview
+
+Week 4 focused on automating the complete investment risk monitoring workflow and creating executive-level reporting capabilities. The objective was to eliminate manual intervention in data processing, ensure regular portfolio updates, and provide decision-makers with a concise summary of key portfolio risk indicators. The entire analytics pipeline was scheduled to run automatically, generating updated risk metrics and visual reports whenever new market data became available.
+
+---
+
+## Objectives
+
+* Automate end-to-end portfolio risk analysis workflow.
+* Schedule periodic market data refreshes.
+* Generate updated portfolio risk metrics automatically.
+* Develop executive-level summary reporting.
+* Improve monitoring and maintenance capabilities.
+* Validate the accuracy of all calculated risk measures.
+
+---
+
+## Key Activities
+
+### Workflow Automation
+
+The complete AlphaPulse Investment Risk Monitor pipeline was automated to perform all required tasks without manual execution. The workflow includes:
+
+* Market data collection
+* Data cleaning and preprocessing
+* Portfolio return calculations
+* Risk metric generation
+* Visualization updates
+* Dashboard refresh
+
+Automation ensures that portfolio analytics remain current and available for continuous monitoring.
+
+**Deliverable:**
+
+* Automated End-to-End Risk Analytics Pipeline
+
+---
+
+### Scheduled Data Refresh
+
+A scheduling mechanism was implemented to refresh market data at predefined intervals. This allows the system to continuously collect the latest stock prices and update all portfolio calculations automatically.
+
+Key features include:
+
+* Scheduled execution
+* Automated data retrieval
+* Refresh status monitoring
+* Failure detection and logging
+
+**Deliverable:**
+
+* Automated Market Data Refresh System
+
+---
+
+### Executive Summary Dashboard
+
+A dedicated executive reporting section was developed to provide a high-level overview of portfolio performance and risk exposure.
+
+The dashboard includes:
+
+* Portfolio Value
+* Total Return
+* Portfolio Volatility
+* Value at Risk (VaR)
+* Maximum Drawdown
+* Diversification Metrics
+* Risk Trend Indicators
+
+The objective is to help stakeholders quickly assess portfolio health and make informed investment decisions.
+
+**Deliverable:**
+
+* Executive Summary Dashboard
+
+---
+
+### Performance Monitoring & Error Handling
+
+System monitoring capabilities were added to track workflow execution and identify operational issues.
+
+Key functionalities include:
+
+* Refresh status validation
+* Error logging
+* Data quality verification
+* Recovery procedures for failed executions
+
+This improves reliability and minimizes downtime.
+
+**Deliverable:**
+
+* Refresh Monitoring & Error Handling Framework
+
+---
+
+### Financial Accuracy Validation
+
+All portfolio risk calculations were reviewed and validated against standard financial methodologies to ensure accuracy and consistency.
+
+Validation checks included:
+
+* Portfolio Return Calculations
+* Volatility Metrics
+* Value at Risk (VaR)
+* Maximum Drawdown
+* Correlation Analysis
+
+Results were compared against benchmark financial calculations to verify correctness.
+
+**Deliverable:**
+
+* Financial Accuracy Validation Report
+
+---
+
+## Tools & Technologies
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Tableau
+* Git & GitHub
+* Windows Task Scheduler / Cron Jobs
+
+---
+
+## Key Outputs
+
+* Fully Automated Risk Analytics Pipeline
+* Scheduled Market Data Refresh System
+* Executive Summary Dashboard
+* Workflow Monitoring Framework
+* Error Handling Procedures
+* Financial Accuracy Validation Report
+
+---
+
+## Learning Outcomes
+
+* Gained experience in workflow automation and scheduling.
+* Improved understanding of production-ready analytics systems.
+* Learned techniques for monitoring and maintaining automated pipelines.
+* Developed executive reporting and KPI presentation skills.
+* Applied financial validation methods to verify risk calculations.
+
+---
+
+Week 4 successfully completed the AlphaPulse Investment Risk Monitor project by transforming the analytics workflow into a fully automated and production-ready system. Automated data refreshes, executive dashboards, monitoring capabilities, and financial validation processes were integrated to ensure reliable portfolio risk analysis and decision support.
+
+### Final Project Deliverables
+
+✅ Historical Market Data Pipeline
+
+✅ Portfolio Return Analysis
+
+✅ Monte Carlo Simulation Model
+
+✅ Asset Correlation Analysis
+
+✅ Value at Risk (VaR) Estimation
+
+✅ Rolling Volatility Monitoring
+
+✅ Executive Risk Dashboard
+
+✅ Automated Data Refresh System
+
+✅ Financial Validation Framework
+
+✅ Production-Ready AlphaPulse Investment Risk Monitor
+
+
+
 
 

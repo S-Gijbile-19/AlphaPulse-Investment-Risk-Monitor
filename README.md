@@ -166,5 +166,89 @@ To ensure the reliability and accuracy of all calculations, I built `accuracy_ch
 **Outcome:** Successfully delivered a fully automated end-to-end financial risk analytics workflow, covering data collection, risk metric generation, executive reporting, validation, and scheduled execution with high accuracy and reliability.
 
 
+# Week 3: Portfolio Risk Analytics & Visualization
+
+## Overview
+
+Week 3 focused on evaluating portfolio risk and developing visual analytics to support investment decision-making. Various statistical techniques were applied to measure risk exposure, analyze asset relationships, and monitor portfolio performance under different market conditions.
+
+## Objectives
+
+* Analyze relationships between portfolio assets.
+* Measure potential portfolio losses using Value at Risk (VaR).
+* Evaluate portfolio return behavior and volatility.
+* Develop visual dashboards for risk monitoring and reporting.
+
+## Key Activities
+
+### Asset Correlation Analysis
+
+An asset correlation matrix was generated to understand how portfolio assets move relative to one another. This analysis helps identify diversification opportunities and assess concentration risk.
+
+**Deliverable:**
+
+* Asset Correlation Matrix Heatmap
+
+### Value at Risk (VaR) Analysis
+
+Historical Value at Risk (VaR) at a 95% confidence level was calculated to estimate the maximum expected portfolio loss during adverse market movements.
+
+**Deliverable:**
+
+* Portfolio VaR (95%) Report
+* VaR Visualization
+
+### Return Distribution Analysis
+
+Daily portfolio returns were analyzed to understand return patterns, identify extreme outcomes, and evaluate overall return behavior.
+
+**Deliverable:**
+
+* Return Distribution Histogram
+
+### Rolling Volatility Analysis
+
+Rolling volatility was calculated to monitor changes in portfolio risk over time and identify periods of increased market uncertainty.
+
+**Deliverable:**
+
+* Rolling Portfolio Volatility Visualization
+
+### Executive Dashboard Development
+
+A consolidated executive dashboard was developed to provide a high-level overview of portfolio performance and risk metrics. The dashboard integrates key indicators, charts, and risk analytics into a single monitoring interface.
+
+**Deliverable:**
+
+* Executive Portfolio Dashboard
+
+## Tools & Technologies
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Tableau
+* Git & GitHub
+
+## Key Outputs
+
+* Asset Correlation Matrix
+* Portfolio Value at Risk (95%)
+* Return Distribution Analysis
+* Rolling Volatility Monitoring
+* Executive Risk Dashboard
+
+## Learning Outcomes
+
+* Applied quantitative risk measurement techniques.
+* Improved understanding of portfolio diversification and risk exposure.
+* Developed financial data visualization skills.
+* Created executive-level reporting dashboards for investment analysis.
+
+## Project Status
+
+Week 3 successfully enhanced the AlphaPulse Investment Risk Monitor by introducing portfolio risk analytics, advanced visualizations, and executive reporting capabilities.
 
 

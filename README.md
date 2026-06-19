@@ -153,17 +153,6 @@ alphapulse/
 
 *Week 1 complete. All clean data files are in `data/clean/` and ready for Week 2 Monte Carlo simulation and Tableau visualisation.*
 
-GitHub-க்கு **detailed version** வேணும்னா இதைப் போடலாம்:
-
-**Week 4 – Finalization**
-
-In the final phase of the project, I automated the complete market data refresh process by developing `refresh_data.py`. This script downloads the latest stock prices for all 11 selected tickers, calculates daily log returns, and updates the master datasets (`master_prices.csv` and `master_returns.csv`). To eliminate manual intervention, the process was scheduled to run automatically every Sunday using Windows Task Scheduler.
-
-To provide high-level business insights, I developed `executive_summary.py`, which calculates key risk metrics such as Value at Risk (VaR 95%) and Maximum Drawdown for all 11 stocks. The results are exported into `executive_summary.csv`, enabling quick executive-level analysis of portfolio risk.
-
-To ensure the reliability and accuracy of all calculations, I built `accuracy_check.py`, which validates important financial metrics including Sharpe Ratio, Annual Return, and Volatility across the entire dataset. The validation process successfully achieved a **100% pass rate**, with **zero null values** detected across **1,508 trading days**, confirming the integrity and consistency of the data pipeline.
-
-**Outcome:** Successfully delivered a fully automated end-to-end financial risk analytics workflow, covering data collection, risk metric generation, executive reporting, validation, and scheduled execution with high accuracy and reliability.
 
 
 # Week 3: Portfolio Risk Analytics & Visualization
